@@ -43,4 +43,15 @@ class SnackBars {
         icon: const Icon(Icons.check_circle),
         backgroundColor: Colors.green);
   }
+
+  static void info(BuildContext context, {required String message}) {
+    show(context, message: message);
+  }
+
+  static void warning(BuildContext context, {required String message}) {
+    show(context,
+        message: message,
+        icon: const Icon(Icons.error_outline),
+        backgroundColor: Colors.orange);
+  }
 }
